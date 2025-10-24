@@ -16,7 +16,7 @@ const dbConfig = {
   migrations: [],
   subscribers: [],
   ssl: {
-    ca: fs.readFileSync('ca.pem').toString(),
+    ca: fs.readFileSync('/etc/secrets/ca.pem').toString(),
     rejectUnauthorized: true,
   },
 }
