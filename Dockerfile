@@ -11,4 +11,4 @@ WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package*.json ./
 RUN npm install --legacy-peer-deps
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/server.js"]
