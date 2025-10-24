@@ -25,6 +25,12 @@ app.use(
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     exposedHeaders: ['Set-Cookie'], 
+    cookie: {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none', 
+    maxAge: 1000 * 60 * 60 * 24,
+    },
   })
 )
 app.use(express.json())
